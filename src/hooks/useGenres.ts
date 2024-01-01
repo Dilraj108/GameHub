@@ -1,5 +1,4 @@
-import useData from "./useData";
-
+import genres from '../data/Genres'
 export interface Genres{
     id:number;
     name:string;
@@ -7,7 +6,7 @@ export interface Genres{
 }
 
 
-const useGenres=()=>useData<Genres>('/genres')
+const useGenres=()=>({data:genres,isLoading:false,error:null})
    
 export default useGenres;
 
